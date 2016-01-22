@@ -1,5 +1,5 @@
 /*
- * $Id: hanoi.c,v 1.1 2016/01/22 06:57:43 urs Exp $
+ * $Id: hanoi.c,v 1.2 2016/01/22 22:51:48 urs Exp $
  */
 
 #include <stdlib.h>
@@ -32,8 +32,8 @@ int main(int argc, char **argv)
 
 static void hanoi(int n, int src, int dst)
 {
-	if (n == 1)
-		printf("%d -> %d\n", src, dst);
+	if (n == 0)
+		return;
 	else {
 		int tmp = 3 - src - dst;
 		hanoi(n - 1, src, tmp);
